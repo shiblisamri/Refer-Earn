@@ -1,0 +1,6 @@
+{
+    "name": "telegram-bot",
+    "require": {
+        "php": "^8.0"
+    }
+}

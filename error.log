@@ -1,0 +1,2 @@
+[2024-04-04 12:34:56] Webhook set: {"ok":true,"result":true,"description":"Webhook was set"}
+[2024-04-04 12:35:01] Send message failed: Failed to open stream: HTTP request failed!
