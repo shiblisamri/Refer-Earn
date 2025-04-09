@@ -1,6 +1,19 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
+    RewriteBase /
+    
+    # Allow access to index.php
+    RewriteRule ^index\.php$ - [L]
+    
+    # Block direct access to other PHP files
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule \.php$ - [F,L]
+    
+    # Redirect all other requests to index.php
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^ index.php [QSA,L]
+    RewriteRule . /index.php [L]
 </IfModule>
+
+# Disable directory listing
+Options -Indexes
